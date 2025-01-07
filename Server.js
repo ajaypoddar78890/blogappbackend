@@ -15,12 +15,22 @@ connectDB();
 const app = express();
 
 //middelwares
+
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
-    credentials: true,
+    origin: ["https://ionassist.vercel.app"], // Replace with your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+// app.use(
+//   cors({
+//     // origin: ["http://localhost:3000", "https://ionassist.vercel.app/"],
+
+//     credentials: true,
+//   })
+// );
 
 app.use(express.json());
 

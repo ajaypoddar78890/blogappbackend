@@ -13,7 +13,6 @@ export const Createtasks = async (req, res) => {
 };
 export const GetAlltasks = async (req, res) => {
   try {
-    // Fetch all tasks from your database or perform the necessary logic
     const tasks = await Task.find();
     res.status(200).json(tasks);
   } catch (error) {
@@ -22,7 +21,6 @@ export const GetAlltasks = async (req, res) => {
 };
 export const GetTaskbyid = async (req, res) => {
   try {
-    // Fetch a single task by ID from your database or perform the necessary logic
     const taskId = req.params.id;
     const task = await Task.findById(taskId);
 
@@ -37,7 +35,6 @@ export const GetTaskbyid = async (req, res) => {
 };
 export const DeleteTasks = async (req, res) => {
   try {
-    // Delete a task by ID from your database or perform the necessary logic
     const taskId = req.params.id;
     const deletedTask = await Task.findByIdAndDelete(taskId);
 
