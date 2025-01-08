@@ -25,14 +25,6 @@ app.use(cors());
 //   })
 // );
 
-// app.use(
-//   cors({
-//     // origin: ["http://localhost:3000", "https://ionassist.vercel.app/"],
-
-//     credentials: true,
-//   })
-// );
-
 app.use(express.json());
 
 //Routes
